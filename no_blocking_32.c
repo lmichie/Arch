@@ -21,7 +21,7 @@ void cache(void * addr) {
 	int index = ((unsigned long)addr & (unsigned long)INDEX_MASK) >> 5;
 		   
 			
-	int currTag = ((unsigned long)addr & TAG_MASK) >> 17;
+	int currTag = ((unsigned long)addr & TAG_MASK) >> 15;
 	//printf("addr: %p, Index: %x, currTag: %x, BLOCKS %u \n", addr, index, currTag, BLOCKS); 
 	if (validBit[index] && (tag[index] == currTag)) {
 			hits++;
