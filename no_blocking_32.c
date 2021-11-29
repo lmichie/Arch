@@ -8,7 +8,7 @@
 #define BLOCKS CACHE_SIZE/(BLOCK_SIZE * 4)
 #define INDEX_MASK 0x7FE0
 #define OFFSET_MASK 0x1F
-#define TAG_MASK 0xFFFFFFFFFFFE0000
+#define TAG_MASK 0xFFFFFFFFFFF80000
 
 int hits = 0;
 int misses = 0;
